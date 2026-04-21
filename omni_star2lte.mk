@@ -5,7 +5,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/a23/device.mk)
+$(call inherit-product, device/samsung/star2lte/device.mk)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a23/recovery/root,recovery/root)
 
 # Device identifier
 PRODUCT_DEVICE := star2lte
