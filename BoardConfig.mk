@@ -62,6 +62,7 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_RECOVERY_INITRC := device/htc/pico/ramdisk/recovery/init.recovery.usb.rc
 TW_INCLUDE_EROFS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
+BOARD_RAMDISK_USE_LZ4 := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
