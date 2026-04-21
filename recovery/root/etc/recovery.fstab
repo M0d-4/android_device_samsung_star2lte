@@ -1,9 +1,9 @@
 # Android fstab file.
 
 # mount point  fstype device                                   device2              flags
-/system         ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=display="System";wipeingui
-/vendor         ext4   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=display="Vendor";wipeingui
-/odm            ext4   /dev/block/platform/11120000.ufs/by-name/ODM           flags=display="ODM";wipeingui
+/system         ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=display="System";wipeingui;logical
+/vendor         ext4   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=display="Vendor";wipeingui;logical
+/odm            ext4   /dev/block/platform/11120000.ufs/by-name/ODM           flags=display="ODM";wipeingui;logical
 /omr            ext4   /dev/block/platform/11120000.ufs/by-name/OMR           flags=display="OMR";wipeingui
 
 /boot           emmc   /dev/block/platform/11120000.ufs/by-name/BOOT
