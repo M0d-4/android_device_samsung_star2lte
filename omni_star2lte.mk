@@ -4,6 +4,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Inherit device configuration
+$(call inherit-product, device/samsung/a23/device.mk)
+
 # Device identifier
 PRODUCT_DEVICE := star2lte
 PRODUCT_NAME := omni_star2lte
