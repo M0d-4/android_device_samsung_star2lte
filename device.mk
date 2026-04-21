@@ -23,3 +23,10 @@ PRODUCT_PACKAGES += \
 # Dependencies
 TARGET_RECOVERY_DEVICE_MODULES += \
     libfastboot
+
+# EROFS utils
+PRODUCT_PACKAGES += \
+    mkfs.erofs.recovery \
+    dump.erofs.recovery \
+    fsck.erofs.recovery
+
