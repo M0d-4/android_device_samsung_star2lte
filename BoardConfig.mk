@@ -59,18 +59,17 @@ TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TARGET_RECOVERY_INITRC := device/htc/pico/ramdisk/recovery/init.recovery.usb.rc
+TARGET_RECOVERY_INITRC := device/samsung/star2lte/ramdisk/recovery/root/init.recovery.usb.rc
 TW_INCLUDE_EROFS := true
+TARGET_USERIMAGES_USE_EROFS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/star2lte/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(DEVICE_PATH)/dtb
 
 # Include
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
