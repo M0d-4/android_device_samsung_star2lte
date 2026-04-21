@@ -1,17 +1,19 @@
 # Android fstab file.
 
 # mount point  fstype device                                   device2              flags
-/system         ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=backup=0;display="System"
-/vendor         ext4   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=backup=0;display="Vendor";wipeingui
-/odm            ext4   /dev/block/platform/11120000.ufs/by-name/ODM           flags=backup=0;display="ODM";wipeingui
+/system         ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=display="System";wipeingui
+/vendor         ext4   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=display="Vendor";wipeingui
+/odm            ext4   /dev/block/platform/11120000.ufs/by-name/ODM           flags=display="ODM";wipeingui
+/omr            ext4   /dev/block/platform/11120000.ufs/by-name/OMR           flags=display="OMR";wipeingui
 
 /boot           emmc   /dev/block/platform/11120000.ufs/by-name/BOOT
 /recovery       emmc   /dev/block/platform/11120000.ufs/by-name/RECOVERY      flags=backup=1
 /cache          ext4   /dev/block/platform/11120000.ufs/by-name/CACHE         flags=display="Cache"
 
-/system_image   emmc   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=backup=1
-/vendor_image   emmc   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=backup=1
+/system_image   emmc   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=backup=1display="System Image"
+/vendor_image   emmc   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=backup=1display="Vendor Image"
 /odm_image      emmc   /dev/block/platform/11120000.ufs/by-name/ODM           flags=backup=1;flashimg;display="ODM Image"
+/omr_image      ext4   /dev/block/platform/11120000.ufs/by-name/OMR           flags=display="OMR Image";wipeingui
 
 /data           ext4   /dev/block/platform/11120000.ufs/by-name/USERDATA      flags=encryptable=footer;length=-20480
 
@@ -20,6 +22,6 @@
 /misc           emmc   /dev/block/platform/11120000.ufs/by-name/MISC          flags=display="Misc"
 /preload        ext4   /dev/block/platform/11120000.ufs/by-name/HIDDEN        flags=display="Preload";wipeingui
 
-/external_sd    vfat   /dev/block/mmcblk0p1 /dev/block/mmcblk0                flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg        vfat   /dev/block/sdf1 /dev/block/sdf                         flags=display="USB-OTG";storage;wipeingui;removable
+/external_sd    auto   /dev/block/mmcblk0p1 /dev/block/mmcblk0                flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        auto   /dev/block/sdf1 /dev/block/sdf                         flags=display="USB-OTG";storage;wipeingui;removable
 
