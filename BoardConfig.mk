@@ -60,6 +60,7 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_RECOVERY_INITRC := device/htc/pico/ramdisk/recovery/init.recovery.usb.rc
+TW_INCLUDE_EROFS := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
