@@ -7,12 +7,6 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
-# fastbootd
-TW_INCLUDE_FASTBOOTD := true
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
-    fastbootd
 
 # Health
 PRODUCT_PACKAGES += \
@@ -22,7 +16,10 @@ PRODUCT_PACKAGES += \
 
 # Dependencies
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libfastboot
+    libfastboot \
+    libion \
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery
 
 # EROFS utils
 PRODUCT_PACKAGES += \
