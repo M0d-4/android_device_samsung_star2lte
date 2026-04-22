@@ -32,6 +32,7 @@ BOARD_HAS_NO_REAL_SDCARD := true
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := Mod4
+TW_FORCE_USE_BUSYBOX := true
 RECOVERY_VARIANT := twrp
 ALLOW_MISSING_DEPENDENCIES=true
 TW_THEME := portrait_hdpi
