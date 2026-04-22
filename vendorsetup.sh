@@ -19,4 +19,3 @@ export OF_ENABLE_FRP_ADDON=1
 export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/11120000.ufs/by-name/SYSTEM"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/platform/11120000.ufs/by-name/VENDOR"
 export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/11120000.ufs/by-name/BOOT"
-export OF_USE_DMCTL=1
