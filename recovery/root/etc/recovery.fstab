@@ -13,7 +13,7 @@
 /system_image   emmc   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=backup=1;display="System Image";flashimg=1
 /vendor_image   emmc   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=backup=1;display="Vendor Image";flashimg=1
 /odm_image      emmc   /dev/block/platform/11120000.ufs/by-name/ODM           flags=backup=1;display="ODM Image";flashimg=1
-/omr_image      ext4   /dev/block/platform/11120000.ufs/by-name/OMR           
+/omr_image      ext4   /dev/block/platform/11120000.ufs/by-name/OMR           flags=backup=1;display="OMR Image"
 
 /data           ext4   /dev/block/platform/11120000.ufs/by-name/USERDATA      flags=encryptable=footer;length=-20480
 
