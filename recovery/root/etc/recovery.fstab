@@ -23,6 +23,7 @@
 /misc           emmc   /dev/block/platform/11120000.ufs/by-name/MISC          flags=display="Misc"
 /preload        ext4   /dev/block/platform/11120000.ufs/by-name/HIDDEN        flags=display="Preload";wipeingui
 
-/external_sd    auto   /dev/block/mmcblk0p1 /dev/block/mmcblk0                flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg        auto   /dev/block/sdf1 /dev/block/sdf                         flags=display="USB-OTG";storage;wipeingui;removable
+/storage	auto    	/data/media/0                  		     	flags=backup=1;display="Internal Storage";usermrf;fsflags="bind,utf8";removable
+/sdcard1	auto		/dev/block/mmcblk0p1	/dev/block/mmcblk1	flags=display="MicroSD Card";storage;wipeingui;removable
+/usb_otg	auto    	/dev/block/sdg1       	/dev/block/sdh1         flags=fsflags=utf8;display="USB Storage";storage;wipeingui;removable
 
