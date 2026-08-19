@@ -2,6 +2,8 @@
 
 # mount point  fstype device                                   device2              flags
 /system         ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=display="System";wipeingui;backup=0
+/system/product ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM/PRODUCT flags=display="Product";wipeingui;backup=0
+/system/system_ext ext4   /dev/block/platform/11120000.ufs/by-name/SYSTEM/SYSTEM_EXT        flags=display="System_EXT";wipeingui;backup=0
 /vendor         ext4   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=display="Vendor";wipeingui;backup=0
 /odm            ext4   /dev/block/platform/11120000.ufs/by-name/ODM           flags=display="ODM";wipeingui;backup=0
 /omr            ext4   /dev/block/platform/11120000.ufs/by-name/OMR           flags=display="OMR";wipeingui;backup=1
@@ -11,6 +13,8 @@
 /cache          ext4   /dev/block/platform/11120000.ufs/by-name/CACHE         flags=display="Cache"
 
 /system_image   emmc   /dev/block/platform/11120000.ufs/by-name/SYSTEM        flags=backup=1;display="System Image";flashimg=1
+/system_image/product_image emmc   /dev/block/platform/11120000.ufs/by-name/SYSTEM/PRODUCT flags=backup=1;display="Product Image";flashimg=1
+/system_image/system_ext_image emmc   /dev/block/platform/11120000.ufs/by-name/SYSTEM/SYSTEM_EXT        flags=backup=1;display="System_EXT Image";flashimg=1
 /vendor_image   emmc   /dev/block/platform/11120000.ufs/by-name/VENDOR        flags=backup=1;display="Vendor Image";flashimg=1
 /odm_image      emmc   /dev/block/platform/11120000.ufs/by-name/ODM           flags=backup=1;display="ODM Image";flashimg=1
 
